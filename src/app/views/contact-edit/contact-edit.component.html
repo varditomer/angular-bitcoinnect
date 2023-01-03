@@ -1,0 +1,20 @@
+<section *ngIf="contact" class='contact-edit flex column'>
+    <header class='flex'>
+        <a routerLink="/contact" class="back">Back</a>
+        <!-- <a to='/contact' class="Remove">Remove</a> -->
+    </header>
+    <section class="contact flex column">
+        <h2>{{contact._id ? 'Edit Contact' : 'Add Contact'}}</h2>
+        <div *ngIf="contact._id; else contactImg" class="initials">{{getInitials()}}</div>
+        <ng-template #contactImg>
+            <img src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png" alt="" />
+        </ng-template>
+
+        <form (ngSubmit)="onSaveContact()" class='flex column'>
+            <input [(ngModel)]="contact.name"  type='text' name='name' placeholder="enter name" />
+            <input [(ngModel)]="contact.email" type='email' name='email' placeholder="enter email" />
+            <input [(ngModel)]="contact.phone" type='phone' name='phone' placeholder="enter phone" />
+            <button>Save</button>
+        </form>
+    </section>
+</section>

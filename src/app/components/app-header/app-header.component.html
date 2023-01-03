@@ -1,0 +1,13 @@
+<!-- <header *ngIf="user" class='app-header'> -->
+<header class='app-header'>
+    <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" title="Home"
+        class="app-title"><span class="bit">&#8383;</span>itCo<span class="coin">in</span><span
+            class="connect">nect</span></a>
+    <nav class="nav-links">
+        <a routerLink='/contact' routerLinkActive="active" title="Contacts" class="link">Contacts</a>
+        <span>|</span>
+        <a routerLink='/statistic' routerLinkActive="active" title="Statistic" class="link">Statistic</a>
+        <span>|</span>
+        <a class="link logout" (click)="onLogout()">Logout</a>
+    </nav>
+</header>

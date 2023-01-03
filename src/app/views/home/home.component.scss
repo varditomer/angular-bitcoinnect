@@ -1,0 +1,80 @@
+@import '../../../assets/scss/setup/variables';
+
+.home {
+    > * {
+        padding: 0 30px;
+        width: 100%;
+    }
+    color: white;
+    height: calc(100vh - 75px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $secondary-bgc;
+
+    .main-header {
+        background-color: $header-bgc;
+        padding-top: 6px;
+        align-items: center;
+        h1 {
+            font-size: 24px;
+        }
+    }
+    .details {
+        background-color: $header-bgc;
+        font-size: 20px;
+        justify-content: space-between;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .rate {
+            justify-content: space-between;
+            .curr-rate {
+                text-align: right;
+                font-size: 38px;
+            }
+        }
+        .title {
+            color: darken(darkgray, 10%);
+            font-weight: 400;
+            display: flex;
+            align-items: center;
+            .live {
+                font-size: smaller;
+                display: flex;
+                justify-content: center;
+                margin-left: 5px;
+                border-radius: 10px;
+                width: 42px;
+                background-color: rgb(65, 189, 230);
+
+                color: white;
+            }
+        }
+        .balance {
+            .bit {
+                color: $clr-bit;
+            }
+            .usd {
+                color: $clr-usd;
+            }
+        }
+    }
+    .chart {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        >* {
+            width: 100%;
+        }
+
+    }
+    .move-list {
+        padding: 0;
+        margin-top: 30px;
+        height: 100%;
+        background-color: darken($secondary-bgc, 6%);
+    }
+
+}

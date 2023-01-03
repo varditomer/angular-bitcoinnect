@@ -1,0 +1,7 @@
+<section class='contact-header'>
+    <form class='contact-filter'>
+        <input (input)="onSetFilter()" [(ngModel)]="filterBy.term" type="text" name="term" placeholder='Search' />
+    </form>
+    <a routerLink="/contact/edit" class="add">Add Contact</a>
+
+</section>

@@ -1,0 +1,9 @@
+<section class="statistic">
+    <h1>Statistics:</h1>
+    <section class="chart">
+        <google-chart *ngIf="marketPriceData" [type]="chartType" [data]="marketPriceData" [title]="title" [height]="300"></google-chart>
+    </section>
+    <section class="chart">
+        <google-chart *ngIf="confirmedTransactionsData" [type]="chartType" [data]="confirmedTransactionsData" [title]="title1" [height]="300"></google-chart>
+    </section>
+</section>

@@ -1,0 +1,21 @@
+<section class='move-list'>
+    <section class="move-history flex column">
+        <div class="title">{{title}}</div>
+
+        <section *ngIf="loggedinUser.moves" class="moves">
+
+            <section *ngIf="contact; else history">
+                <div class="contact-moves" *ngFor="let move of loggedinUser.moves">
+                    <transfer-fund *ngIf="contact._id === move.toId" [move]="move" 
+                        [bitRate]="bitRate"></transfer-fund>
+                </div>
+            </section>
+            <ng-template #history>
+                <section class="move-history" *ngFor="let move of loggedinUser.moves; index as idx">
+                    <transfer-fund *ngIf="idx<3" [move]="move"  [bitRate]="bitRate"></transfer-fund>
+                </section>
+            </ng-template>
+
+        </section>
+    </section>
+</section>

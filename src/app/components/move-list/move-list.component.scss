@@ -1,0 +1,19 @@
+@import '../../../assets/scss/setup/variables';
+
+.move-list {
+    padding: 0 30px;
+    overflow-y: auto;
+    height: 30vh;
+    padding-bottom: 10px;
+    background-color: darken($secondary-bgc,6%);
+    width: 100%;
+
+    .move-history {
+        gap: 10px;
+        .title {
+            font-size: rem(20px);
+        }
+      
+    }
+}
+

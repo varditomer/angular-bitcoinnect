@@ -1,0 +1,26 @@
+@import '../../../assets/scss/setup/variables';
+
+.statistic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    background-color: $secondary-bgc;
+    height: calc(100vh - 75px);
+    h1{
+        font-size: 30px;
+        text-decoration: underline white;
+
+    }
+
+    .chart {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        width: 96%;
+        >* {
+            width: 100%;
+        }
+
+    }
+}

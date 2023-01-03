@@ -1,0 +1,12 @@
+<section class='transfer-fund'>
+    <section class="move">
+        <div class="amount flex">
+            <span class="bit">&#8383; {{move.amount}} |</span>
+            <span class="usd">{{(move.amount / bitRate).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}}</span>
+        </div>
+        <div class="status">
+            status: <span class='type'>approve</span>
+        </div>
+        <div class="timestamp">{{timeFormatter()}}</div>
+    </section>
+</section>

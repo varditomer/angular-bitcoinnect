@@ -1,0 +1,69 @@
+@import "../../../assets/scss/setup/variables";
+@import "../../../assets/scss/setup/functions";
+
+.app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primary-bgc;
+    height: $navHeight;
+    padding: 30px;
+    font-size: rem(25px);
+    font-family: "fantasy";
+    color: white;
+    font-weight: 800;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.5);
+    .app-title {
+        cursor: pointer;
+        .bit {
+            letter-spacing: 1.5px;
+        }
+        .connect {
+            color: limegreen;
+        }
+        .coin {
+            color: lighten(gold, 15%);
+        }
+        &:hover {
+            color: gray;
+            text-decoration: underline white;
+            .connect {
+                color: darkgreen;
+            }
+            .coin {
+                color: darken(gold, 30%);
+            }
+        }
+        &.active {
+            text-decoration: underline lightcoral;
+        }
+    }
+    .nav-links {
+        font-size: rem(20px);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        .link {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            padding: 5px;
+            &:hover {
+                color: gray;
+                text-decoration: underline white;
+            }
+            &.logout {
+                &:hover {
+                    color: red;
+                }
+            }
+            &.active {
+                text-decoration: underline lightcoral;
+            }
+        }
+        span {
+            cursor: default;
+            font-size: 25px;
+        }
+    }
+}

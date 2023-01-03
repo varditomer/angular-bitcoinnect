@@ -1,0 +1,21 @@
+@import '../../../assets/scss/setup/variables';
+.transfer-fund{
+
+.move {
+    .amount {
+        gap: 5px;
+        .bit {
+            color: $clr-bit;
+        }
+        .usd {
+            color: $clr-usd;
+        }
+        margin-bottom: 3px;
+    }
+    .status {
+        .type {
+            color: rgb(51, 51, 251);
+        }
+    }
+}
+}

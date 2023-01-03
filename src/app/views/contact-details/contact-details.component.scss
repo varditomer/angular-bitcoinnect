@@ -1,0 +1,80 @@
+@import '../../../assets/scss/setup/variables';
+@import '../../../assets/scss/setup/functions';
+.contact-details-page {
+    > *:not(:last-child) {
+        padding: 0 30px;
+    }
+    height: calc(100vh - 75px);
+    header {
+        justify-content: space-between;
+        background-color: $header-bgc;
+        min-height: $headerHeight;
+        align-items: center;
+        border-bottom: 1px solid gray;
+        a {
+            border: unset;
+            padding: 10px 0;
+            color: $primary-clr;
+            font-weight: 500;
+
+        }
+    }
+    .contact {
+        background-color: $secondary-bgc;
+        width: 100%;
+        align-items: center;
+        min-height: 60%;
+        justify-content: space-evenly;
+        .details-container {
+            align-items: center;
+            justify-content: space-between;
+            >* {
+                cursor: default;
+            }
+            .initials {
+                background-color: $primary-bgc;
+                height: 120px;
+                width: 120px;
+                outline: 1px solid white;
+                border-radius: 4em;
+                text-transform: capitalize;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: rem(30px);
+                margin-bottom: 10px;
+            }
+            .details {
+                gap: 10px;
+                margin-bottom: 10px;
+                .name {
+                    color: darken($clr6, 10%);
+                    font-size: rem(30px);
+                }
+                .phone {
+                    font-size: rem(20px);
+                }
+            }
+        }
+        .transfer-container {
+            height: 40px;
+            input[type="number"]::-webkit-inner-spin-button,
+            input[type="number"]::-webkit-outer-spin-button,
+            input {
+                background-color: $primary-bgc;
+                border: none;
+                -webkit-appearance: none;
+                margin: 0;
+                color: $primary-clr;
+                padding-left: 5px; 
+            }
+            .transfer {
+                background-color: $clr6;
+                border-radius: 3px;
+                color: $primary-clr;
+                border-color: $clr6;
+            }
+        }
+    }
+    
+}

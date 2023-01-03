@@ -1,0 +1,15 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+// setup
+@import './setup/variables';
+@import './setup/functions';
+@import './setup/mixins';
+
+// basics
+@import './basics/animations';
+@import './basics/base';
+@import './basics/helpers';
+@import './basics/layout';
+@import './basics/modals';
+@import './basics/typography';

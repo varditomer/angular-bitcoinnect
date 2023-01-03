@@ -1,0 +1,23 @@
+<section *ngIf="contact" class='contact-details-page flex column'>
+    <header class='flex'>
+        <a routerLink='/contact' class="back">Back</a>
+        <a routerLink="/contact/edit/{{contact._id}}" class="edit">Edit</a>
+    </header>
+    <section class="contact flex column">
+        <div class="details-container flex column">
+            <div class="initials">{{getInitials()}}</div>
+            <div class="details flex column">
+                <div class="name">{{contact.name}}</div>
+                <div class="phone">{{contact.phone}}</div>
+                <div class="email">{{contact.email}}</div>
+            </div>
+        </div>
+        <form class="transfer-container flex" (submit)="makeTransfer(+amount.value)">
+            <input type="number" #amount />
+            <button class="transfer" type="submit">Transfer</button>
+        </form>
+    </section>
+
+    <move-list [loggedinUser]="loggedinUser" [contact]="contact" [title]="'♻ Move History'"></move-list>
+
+</section>

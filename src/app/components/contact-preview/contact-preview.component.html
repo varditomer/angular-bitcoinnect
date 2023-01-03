@@ -1,0 +1,9 @@
+<section *ngIf="contact" routerLink="/contact/{{contact._id}}" class='contact-preview'>
+    <div class="img-container">
+        <div class="initials">{{getInitials()}}</div>
+    </div>
+    <div class="contact-details">
+        <span class='name'>{{contact.name}}</span>
+        <span class='phone'>{{contact.phone}}</span>
+    </div>
+</section>

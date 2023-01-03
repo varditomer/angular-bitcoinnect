@@ -1,0 +1,25 @@
+<section class='home flex column'>
+
+    <header class='main-header flex'>
+        <h1>Hi, {{user.name}}</h1>
+    </header>
+
+    <section class="details flex">
+        <div class="balance flex column">
+            <span class='title'>CURRENT BALANCE:</span>
+            <div>BIT: <span class='bit'> &#8383; {{(user.coins).toLocaleString()}} </span></div>
+            <div>USD: <span class='usd'> {{ usdBalance$ | async }}</span></div>
+        </div>
+        <div class="rate flex column">
+            <div class="title">CURRENT BTC USD <span class='live'>live</span></div>
+            <span class='curr-rate'>{{ (rate$ | async)}}</span>
+        </div>
+    </section>
+    <section class="chart">
+        <google-chart *ngIf="myData" [type]="chartType" [data]="myData" [title]="title" [height]="300"></google-chart>
+    </section>
+
+    <move-list class="move-list" [loggedinUser]="loggedinUser" [contact]="null" [title]="'Last 3 moves'"></move-list>
+
+
+</section>

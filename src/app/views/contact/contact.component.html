@@ -1,0 +1,4 @@
+<section class='contact'>
+    <contact-header></contact-header>
+    <contact-list *ngIf="contacts$" [contacts]="contacts$ | async"></contact-list>
+</section>
